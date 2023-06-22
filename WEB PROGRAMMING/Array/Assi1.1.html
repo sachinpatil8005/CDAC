@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+   <script>
+
+      /*function arrays()
+        { 
+             var ip=prompt("entre size");
+            num=ip;
+            var nums=[];
+            for(i=0;i<num;i++)
+            {
+                var input=prompt("enter value");
+                 nums.push(input);
+            }
+            for(i=0;i<num;i++)
+            {
+                document.write("<br/>"+nums[i])
+            }
+        }*/
+
+     /*var arr = [34,21,67,"Hello",false]; 
+     arr[6]=67.89;
+         document.write("<ul>")
+         for(i=0;i<arr.length;i++)
+         {
+           document.write("<li>"+arr[i]+"</li>")              //34,21,67,Hello,false,undefined,67.89
+         }
+         document.write("</ul>")
+        
+ document.write("<br/> Length of arr : "+arr.length);
+
+        for(i in arr)                                         //34,21,67,Hello,false,67.89
+        document.write("<br/>"+arr[i]);
+
+        for(elements of arr)                                  //34,21,67,Hello,false,undefined,67.89
+        document.write("<br/>"+elements);*/
+
+        
+    //  var nums = [45,89,78,43,21,89,56];
+      /*  //CONVERTING ARRAY to string
+        document.write("<br/>"+nums.toString())       //45,89,78,43,21,89,56
+        document.write("<br/>"+nums.join("*"))        //45*89*78*43*21*89*56
+        document.write("........................<br/>");*/
+
+    
+    /*    sorting using function
+        //name function
+        function mysort(v,i,arr)
+        {
+             return v-i;
+        }   
+         nums.sort(mysort);
+         document.write("sorting using name function"+nums);
+
+         document.write("........................<br/>");
+
+        //Ananymous
+        nums.sort(function(a,b) {return a-b } );
+           document.write("sorting using Ananymous function"+nums);
+
+         document.write("........................<br/>");
+
+        //Arrow
+        nums.sort((a,b)=>(a,b))
+        document.write("sorting using arrow function"+nums);*/
+
+
+        /*display using function 
+       //name function
+       function myDispaly(v,i,arr)
+       {
+           document.write("<p>"+v+" present at indedx "+i+" in array of "+arr.join("*")); 
+       }    
+       nums.forEach(myDispaly);
+       
+       document.write("........................<br/>");
+
+       //Ananymous 
+       document.write("<ul>")
+       nums.forEach(function(v,i) {document.write("<li>"+v+"</li>")} );
+       document.write("</ul>")
+
+       //Arrow
+       document.write("<ul>")
+       nums.forEach(v=>document.write("<li>"+v+"</li>"));
+       document.write("</ul>")*/
+      
+   /*   //  sum,av,min,max
+       //sum
+        var sum=nums.reduce((a,b)=>(a+b));
+        document.write(sum);                                 //421
+       document.write(".....................");
+        //avg
+        var avg=nums.reduce((a,b)=>(a+b)/7);
+        document.write(avg);
+
+        document.write(".....................<br/>");
+
+        //min
+        var min=nums.reduce((a,b)=>{ if (a<b) return b} )
+            //     return a<b ? a:b} )
+             document.write(min);                      //21
+    /* document.write(".....................");
+         
+     //max
+     var max=nums.reduce((a,b)=>{
+             return a<b?b:a });                             //89
+              document.write(max);    */
+/*
+     //even
+      var even=nums.filter(a=>a%2==0);
+      document.write(even);                                 //78,56
+      var even1=nums.some(a=>a%2==0)
+      document.write(even1);                               //true
+       var even2=nums.every(a=>a%2==0)
+       document.write(even2);                              //false
+
+    //odd
+    var odd=nums.filter(a=>a%2!=0)
+    document.write(odd);                                 //45,89,43,21,89
+    var odd1=nums.some(a=>a%2!=0)
+    document.write(odd1);                                //true
+    var odd1=nums.every(a=>a%2!=0) 
+    document.write(odd1);                                //false*/
+
+  /*  //prime
+    function prime()
+    {   
+          var ip=prompt("entre size");
+    var nums1=[];
+            for(i=0;i<ip;i++)
+            {
+                var input=prompt("enter value");
+                 nums1.push(input);
+            }
+   
+            nums1.map((number) => {
+    for (let i = 2; i < number; i++) {
+        if(number % i === 0) {
+            var index = nums1.indexOf(number);
+            return index;       
+        }
+    }   
+  });
+
+ return nums1;
+       
+   }*/
+ 
+ /*  var prime=nums.every(checkprime);
+   if(prime)
+     document.write("all number are prime")
+   else
+   document.write("all number are not prime")
+
+     function checkprime(nums)
+    {
+       str="";
+       flag=true;
+       if(num<=1)
+         flag=false
+    else {
+         for(i=2;i<num/2;i++)
+         {
+            if(num% i === 0)
+            {
+               flag=true;
+               break;
+            }  
+          }          
+     }
+     return flag;
+    }*/
+   
+    /*
+      var evenArray=nums.filter(v=>v%2==0);
+      document.write("even array"+evenArray.toString())
+      document.write("<br/>")
+      var oddArray=nums.filter(v=>v%2!=0);
+      document.write("odd array"+oddArray.toString())*/
+
+   imgarr=["20201205_174102.jpg","360_F_532368455_h49G5LChnUPRardr6XBUtaAUSzCOckGn.jpg ","Hydrangeas.jpg","img1.jpg","pic1.jpg"];
+   index=0;
+   function nextImg()
+   {  
+       index++;
+       if(index==imgarr.length)
+          index=-1;
+          document.getElementById("img1").src=imgarr[index];
+     
+   } 
+   function PreviousImg()
+   {  
+       index--;
+       if(index==-1)
+          index=imgarr.length-1;
+          document.getElementById("img1").src=imgarr[index];
+      
+   } 
+   
+   </script>
+
+</head>
+<body>
+    <script>
+       // arrays();
+      // prime();
+</script>
+
+      <img src="360_F_532368455_h49G5LChnUPRardr6XBUtaAUSzCOckGn.jpg " width="200"  height="200" id="img1" border="2" />
+      <br/>
+      <button onclick="nextImg()">next</button>
+      <button onclick="PreviousImg()">Previous</button>
+      <button onclick="slideshow()">slide</button>
+      <button onclick="stopSlideshow()">StopSlide</button>
+
+
+</body>
+</html>
