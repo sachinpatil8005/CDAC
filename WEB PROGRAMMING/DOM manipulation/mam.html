@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>tableformat</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        function fun1(){
+        var nnode=document.getElementsByTagName("tr");
+        alert(nnode.length)
+         for(i=0;i<nnode.length;i++)
+         {
+            var a=document.createElement("div")
+           // alert(a)
+            var trchild = nnode[i].childNodes;
+            for(var j=0;j<trchild.length;j++)
+            {
+                if(trchild[j].nodeName == "TD")
+                {
+                    a.innerHTML += trchild[j].innerHTML;
+                }
+            }    
+            document.getElementById("divs").appendChild(a);
+
+         }
+     }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td><h1>Cricket</h1></td>
+            <td><img src="Cricket.jpg" width="200" height="150"/></td>
+            <td><p>Cricket<br/>
+                Cricket<br/>
+                Cricket<br/>
+                Cricket<br/>
+                Cricket<br/> Cricket<br/>Cricket<br/>Cricket<br/></p>
+            </td>
+        </tr>
+        <tr>
+            <td><h1>Football</h1></td>
+            <td><img src="Football.jpg" width="200" height="150"/></td>
+            <td>Football<br/>Football<br/>Football<br/>Football<br/>Football<br/>Football<br/>Football<br/>Football<br/></td>
+        </tr>
+        <tr>
+            <td><h1>Volleyball</h1></td>
+            <td><img src="Volleyball.jpg" height="150" width="200"/></td>
+            <td>Volleyball<br/>Volleyball<br/>Volleyball<br/>Volleyball<br/>Volleyball<br/>Volleyball<br/>Volleyball<br/>Volleyball<br/></td>
+        </tr>
+    </table>
+    <button onclick="fun1()">Click</button>
+    <div id="divs"></div>
+</body>
+</html>

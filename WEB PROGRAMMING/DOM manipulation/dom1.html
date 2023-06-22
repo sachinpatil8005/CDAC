@@ -1,0 +1,37 @@
+<html lang="en">
+<head><script>
+function replaceAll()
+{
+    var l=document.getElementsByTagName("li")
+   //alert(l[0].firstChild)
+
+    var photo=["desktop.jpg","mycomputer.jpg","folder.jpg","browser.jpg"]
+  
+    for(i=0;i<l.length;i++)
+    {  
+        var neNode=document.createElement("img")
+        neNode.setAttribute("src",photo[i])
+        l[i].replaceChild(neNode,l[i].firstChild)
+    }
+}
+
+
+
+</script>
+   
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="uu">
+        <li>desktop</li>
+        <li>mycomputer</li>
+        <li>folder</li>
+        <li>browser</li>
+      
+    </ul>
+    
+    <button onclick="replaceAll()">Replace</button>
+
+</body>
+</html>
