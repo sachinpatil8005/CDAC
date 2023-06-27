@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function power(num,pow)
+        {  
+             var temp=1;
+             for(i=1;i<=pow;i++) 
+             {
+                temp=temp*num;
+             }           
+         //  document.write(temp);
+           document.getElementById("result").innerHTML=temp;
+        }
+    </script>
+</head>
+<body>
+    <!--<script>
+          power(4,2);
+    </script>-->
+      <table border="4" style="background-color: tomato;">
+        <form>
+            <tr>
+               <td> Enter base number:
+                <input type="number" name="num" id="num"/></td>
+            </tr>
+            <tr>
+                <td>Enter Exponant number:<input type="number" name="num1"id="num1"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="calculate pow" onclick=" power(num.value,num1.value)"/></td>
+            </tr>
+            
+        </form>
+      </table>
+      <div id="result"></div>
+</body>
+</html>

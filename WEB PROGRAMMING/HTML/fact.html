@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+    /* for(i=1;i<=5;i++)
+      {
+        for(j=1;j<=i;j++)
+        {
+                document.write(j+" ")
+        }
+        document.write("<br/>")
+      }*/
+    </script>
+    <script>
+    function isOddEven(num)
+    {
+        if(num%2==0)
+        {
+                document.write("number is even");
+        }
+        else
+        {
+                document.write("number is odd")
+        }
+    }
+    </script>
+    <script>
+        function isPrime(num)
+        {    flag=false;
+            for(i=2;i<num;i++)
+            {
+             if(num%i==0)
+             {
+                  flag=true; 
+                  break;          
+             }
+            }
+             if(flag==false)
+                document.write("<br/>number is prime");
+             else
+               document.write("<br/>number is not prime");
+          
+        }
+    </script>
+    <script>
+        function factorial(num)
+        {       var fact=1;
+             while(num>0)
+             {
+                 fact=fact*num;
+                 num--;
+                 
+             }   
+            // document.write("<br/>factorial is"+fact);   
+            document.getElementById("result").innerHTML="factorial"+fact; 
+
+         }
+    </script>
+</head>
+<body>
+    <form>
+   <!--<script>
+        isOddEven(34);
+        isPrime(7);
+        factorial(5);
+</script>-->
+<!--var num=PaserInt(Promt("Enter number"))
+factorial(num)-->
+Enter number: <input type="number" name="num"/>
+<br/>
+<input type="button" value="calculate factorial" onclick=" factorial(num.value)"/>
+
+</form>
+<div id="result" ></div>
+
+</body>
+</html>

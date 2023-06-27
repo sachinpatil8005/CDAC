@@ -1,0 +1,1 @@
+document.write("<br/>hello from external java script");
