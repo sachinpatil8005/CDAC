@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+        function calAge(bt)
+        { 
+            var byear=new Date(bt).getFullYear();
+            var cyear=new Date().getFullYear();
+            alert("Age :"+(cyear-byear));
+        }    
+    function getInfo(dt)
+    {    
+         var bd = new Date(dt).getDay();
+         var bm= new Date(dt).getMonth();
+         var by=new Date(dt).getFullYear();
+         alert("Day :"+bd+"   Month :"+bm+"  Year :"+by)
+
+    }
+</Script>
+</head>
+<body>
+  <form>
+        Enter birthdate: <input type="date" name="bdate"/>  
+       <input type="button" value="get info" onclick="getInfo(bdate.value)" />
+       <input type="button" value="Cal age" onclick="calAge(bdate.value)" />
+
+      </form>  
+</body>
+</html>

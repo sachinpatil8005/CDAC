@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <script>
+
+        //incomplete
+        function determine()
+        {
+            var fn=document.f1.uname.value;
+            var part1=/^[A-Z]{1}[a-z]{2,}/
+        }
+
+    </script>
+
+</head>
+<body>
+    <form name="f1">
+        <table border="1">
+        <tr>
+            <td colspan="2">Personal_info</td>
+        </tr>
+        <tr>
+        <td> first name:</td>
+        <td><input type="text" name="uname" id="uid" /></td>
+        </tr>
+        <br/>
+
+    <tr>
+        <td> full name :</td>
+        <td> <input type="text" name="fname" id="fid"/></td>
+    </tr>
+    <br/>
+    
+     <tr>
+        <td>  mobile no:</td>
+        <td> <input type="number" name="mname" id="mid"/></td>
+     </tr>
+    <br/>
+    <tr>
+        <td>  Email :</td>
+        <td> <input type="email" name="ename" id="eid" /></td>
+    </tr>
+    <br/>
+    <tr>
+        <td> cource name :</td>
+        <td> (SELECT ONE)
+            <select>
+                <option></option>
+                <option name="cource" value="DAC">DAC</option>
+                <option name="cource" value="DBDA">DBDA</option>
+            </select>  
+    </tr>
+    <tr>
+        <td align="right"> <input type="button"  value="submit"  onclick="determine()"/></td>
+        <td> <input type="button"  value="reset" /></td>
+
+    </tr>
+    
+ </table>
+    </form>
+</body>
+</html>

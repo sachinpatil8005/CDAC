@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+    <script>
+        function valiDate()
+        {   
+
+             var nn=document.getElementById("lname").value
+             var ln=document.getElementById("fname").value;
+             var part1=/^[a-z]{1,}$/
+             if(!part1.test(nn) || !part1.test(ln))
+             {
+                  alert("name sould contains only alph")
+                  document.getElementById("lname").value="";
+                  document.getElementById("lname").focus();
+                  document.getElementById("fname").value="";
+                  document.getElementById("fname").focus();
+                  return;
+             }
+
+
+
+            var dd=document.getElementById("Ano").value;
+            var part2=/^\d{1,10}$/
+            if(!part2.test(dd))
+             {
+                  alert("only 10 digit ")
+                  document.getElementById("Ano").value="";
+                  document.getElementById("Ano").focus();
+                  return;
+             }
+
+
+
+             var pp=document.getElementById("pass").value;
+             var part3=/^[a-z]{4,}\d{1,}[\@\#\$\.]{1,}$/
+             if(!part3.test(pp))
+             {
+                  alert("passseord in wrong form")
+                  document.getElementById("pass").value="";
+                  document.getElementById("pass").focus();
+                  return;
+             }
+             var wp=/^[a-z]{4,}$/
+             if(wr.test(pp))
+             {
+                  alert("week pass")
+                  document.getElementById("pass").value="";
+                  document.getElementById("pass").focus();
+                  return;
+             }
+
+        
+
+             var prp=document.getElementById("passR").value;
+             if(!(pp==prp))
+               {
+                alert("retype password must be same as password");
+                  document.getElementById("passR").value="";
+                  document.getElementById("passR").focus();
+                  return;
+             }
+          
+
+
+             var ee=document.f1.lname.value;
+            var ee1=document.f1.fname.value;
+            var ee2=document.f1.user.value;
+            var ee3=document.f1.mail.value;
+            var ee4=document.f1.no.value;
+            var ee7=document.f1.card.value;
+            var ee8=document.f1.pass.value;
+            var ee9=document.f1.passR.value;
+
+            if(ee=="" ||ee1==""||ee2==""||ee3==""||ee4=="" ||ee7==""||ee8==""||ee9=="")
+            {
+                  alert("all feild required")
+                  return;
+           }
+           
+           document.f1.submit();
+        }
+    </script>
+    
+</head>
+<body>
+    <div style="width:100%;height:100px;background-color:black">
+        <span style="color:white"> <h1>First Northen bank <img src="360_F_532368455_h49G5LChnUPRardr6XBUtaAUSzCOckGn.jpg" height="50" width="50" /></h1> </span>
+    </div>
+    <div style="width:20%;height:500px;background-color:red;float:left">
+
+    </div>
+    <div style="width:70%;height:500px;background-color:wheat;float:left">
+        <form method="post" name="f1" >
+            <td><h2>New User Registration</h2></td>
+                <br/>
+                <td><p>In order to use FNB's in all days Banking service,please complete the following details and then the submit button to complete the registration.</p></td>
+            <table>  
+                <tr>
+                    <td><label for="name">last name : </label></td>
+                    <td> <input type="text" placeholder="last name" name="last_name" id="lname" /></td>    
+                </tr>
+                 <tr>
+                    <td><label for="name">Fisrt name : </label></td>
+                    <td><input type="text" name="fisrt_name" id="fname" /></td>
+                 </tr>
+                <tr>
+                    <td><label for="user">Prefered your user id : </label> </td>
+                    <td><input type="text" name="user id" id="user" /></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">Email Address : </label></td>
+                    <td><input type="text" name="mail" id="mail" /></td>
+                </tr>
+                <tr>
+                    <td><label for="no">Account Number : </label></td>
+                    <td><input type="text" name="no" id="Ano" /></td>
+                </tr>
+                <tr>
+                    <td><label for="card">Credit card number : </label></td>
+                    <td><input type="text" name="card" id="card" /></td>
+                </tr>
+                <tr>
+                    <td><label for="pass">Online Password : </label></td>
+                    <td><input type="text" name="pass" id="pass"/> </td>
+                </tr>
+                <tr>
+                    <td><label for="passR">Online Password(Repeated) : </label></td>
+                    <td><input type="text" name="passR" id="passR"/> </td>
+                </tr>
+                <tr>
+                    <td align="left"><input type="button" value="submit" onclick="valiDate()"/>
+                    <input type="reset" value="reset"</td>
+                </tr>
+            </table>
+
+
+        </form>
+    </div>
+    <div style="width:10%;height:500px;background-color:red;float:left">
+
+    </div>
+
+</body>
+</html>

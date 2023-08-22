@@ -1,0 +1,30 @@
+<html></html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function startScroll() {
+            var imgnode = document.getElementById("myimg");
+            var l = parseInt(imgnode.style.left) + 20
+            if (l > window.innerWidth)
+                l = 100;
+            imgnode.style.left = l + "px";
+            flag = setTimeout(function () { startScroll() }, 500);
+        }
+
+        function stopScroll() {
+            clearTimeout(flag);
+            var imgnode = document.getElementById("myimg");
+            imgnode.style.position = "absolute";
+            imgnode.style.left = "100px";
+            imgnode.style.top = "100px";
+        }
+
+    </script>
+</head>
+<body>
+    <img id="myimg" src="Hydrangeas.jpg" width="100" height="100"
+         style="position:absolute;top:100px;left:100px"
+         onclick="startScroll()" onmouseover="stopScroll()" />
+</body>
+</html>

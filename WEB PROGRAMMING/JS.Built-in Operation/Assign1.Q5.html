@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+   <script>
+   imgarr=["20201205_174102.jpg","360_F_532368455_h49G5LChnUPRardr6XBUtaAUSzCOckGn.jpg ","Hydrangeas.jpg","img1.jpg","pic1.jpg"];
+   index=0;
+   function nextImg()
+   {  
+       index++;
+       if(index==imgarr.length)
+          index=-1;
+          document.getElementById("img1").src=imgarr[index];
+     
+   } 
+   function PreviousImg()
+   {  
+       index--;
+       if(index==-1)
+          index=imgarr.length-1;
+          document.getElementById("img1").src=imgarr[index];
+      
+   } 
+   
+   function slideshow()
+   {   
+       index++;
+       if(index==imgarr.length)
+           index=-1;
+           document.getElementById("img1").src=imgarr[index];
+     //   temp=setInterval(slideshow,2000);   
+        temp=setTimeout(slideshow,3000)  
+   } 
+   
+   function stopSlideshow()
+   {   
+       clearTimeout(temp);
+   } 
+   </script>
+
+</head>
+<body>
+
+      <img src="360_F_532368455_h49G5LChnUPRardr6XBUtaAUSzCOckGn.jpg " width="200"  height="200" id="img1" border="2" />
+      <br/>
+      <button onclick="nextImg()">next</button>
+      <button onclick="PreviousImg()">Previous</button>
+      <button onclick="slideshow()">slide</button>
+      <button onclick="stopSlideshow()">StopSlide</button>
+
+
+</body>
+</html>

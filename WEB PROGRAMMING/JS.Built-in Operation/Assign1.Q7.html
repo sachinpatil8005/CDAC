@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+  <script>
+    function validate()
+    { 
+       // var uid=document.getElementById("uid_id").value;
+          var uid=document.f1.uid.value; 
+     //   if(uid.length<8 || 14<uid.length)
+        var uu=/^[A-Z]{1}[a-z]{1,}[\.\@\#]{1}$/ 
+        if(!uu.test(uid))             
+        { 
+          alert("user id should in between 8 to 14 char");
+          //document.getElementById("uid_id").value=""
+          document.f1.uid.value="";
+          document.f1.uid.focus();
+          return;
+        }
+      /*  var cappflag=false;
+        var smaaflag= false;
+        var specflag=false;
+        for(i=0;i<uid.length;i++)
+        { 
+          var ascii=uid.charCodeAt(i);
+          if(ascii>=65 && ascii<=90)
+             cappflag=true;
+          if( (ascii >= 97 && ascii <= 122))
+             smaaflag=true;
+          if(!((ascii>=65 && ascii<=90)||(ascii>=97 && ascii<=122)||(ascii>=48 && ascii<=57)))
+             specflag=true;
+        } 
+      if(!cappflag || !smaaflag || !specflag) 
+        { 
+          alert("invalid user name");
+          document.f1.uid.value="";
+          document.f1.uid.focus();
+          return;
+        }  */
+       else
+       {  
+          document.f1.uid.value="";
+          //document.getElementById("uid").innerHTML = "";
+        }  
+
+
+
+
+
+        var pwd=document.f1.pwd.value;
+        var pp=/^[A-Z]{1}[a-z]{1,}[\@\.\#\$]{1}\d{1,}{8,17}$/  
+        if(!pp.test(pwd))
+            { 
+          alert("Password should in between 8 to 14 char");
+          //document.getElementById("uid_id").value=""
+          document.f1.pwd.value="";
+          document.f1.pwd.focus();
+          return;
+        } 
+       /*  
+        var capflag=false;
+        var smaflag=false;
+        var numflag=false;
+        var speflag=false;
+        for(i=0;i<pwd.length;i++)
+        { 
+          var ascii=pwd.charCodeAt(i);
+          if(ascii>=65 && ascii<=90)
+             capflag=true;
+          if(ascii>=48 && ascii<=57)
+             numflag=true;
+          if( (ascii >= 97 && ascii <= 122))
+             smaflag=true;
+          if(!((ascii>=65 && ascii<=90)||(ascii>=97 && ascii<=122)||(ascii>=48 && ascii<=57)))
+             speflag=true;
+        }  
+        
+        if(!numflag ||!capflag || !smaflag || !speflag)
+        { 
+          alert("Invalid password");
+          //document.getElementById("uid_id").value=""
+          document.f1.pwd.value="";
+          document.f1.pwd.focus();
+          return;
+        } */
+        else
+         document.f1.pwd.value="";
+         
+         var gg=/^(M|F)$/
+        if(!gg.test(document.f1.gender.value))
+            {
+                alert("Please select gender");
+                return;
+            }
+        
+
+    }  
+  </script>
+
+</head>
+<body>
+    <form name="f1">
+        Enter user id: <input type="text"name="uid" id="uid_id"  />
+        <span  id="uiderror" style="color:red"></span><br/>
+        Enter password : <input type="text" name="pwd" />
+        <span  id="pwderror" style="color:red"></span><br/>
+        select gender :<input type="radio" name="Male" value="M" />Male <input type="radio" name="Male" value="F" />Female
+        <span  id="gendererror" style="color:red"></span><br/>
+        <input type="button" value="login"  onclick="validate()"/>
+    </form>
+</body>
+</html>

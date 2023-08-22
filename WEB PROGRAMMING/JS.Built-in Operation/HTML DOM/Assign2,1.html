@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    
+    <script>
+        function getInfo()
+        {
+            var child = document.getElementById("content").childNodes;
+            //alert(child.length);
+            var str = "<table border=1>";
+            for(i=0;i<child.length;i++)
+            {
+                //alert(child[i].nodeName+" : "+child[i].nodeType);
+                if(child[i].nodeType == 1)
+                {
+                    //alert(child[i].nodeName+" : "+child[i].firstChild.nodeValue);
+                   if(child[i].firstChild != null)
+                   {
+                    str+="<tr>";
+                    str+="<td>"+ child[i].nodeName +"</td>"; 
+                    str+="<td>"+ child[i].firstChild.nodeValue +"</td>"; 
+                    str+="</tr>";    
+                   }
+                }
+            }
+            str+="</table>";
+            document.getElementById("table").innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        <h1> Learning DOM </h1>
+        <p> DOM allows to modify HTML page dynamically </p>
+        <a href="#"> More examples </a>
+        <br/>
+        <button onclick="getInfo()"> Get Content </button>
+    </div> 
+       
+    <div id="table">
+
+    </div>
+</body>
+</html>

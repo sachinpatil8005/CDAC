@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+<script>
+    function validate()
+    {  
+         var eeid=document.f1.eid.value;
+           var part1=/^[a-z]{4,}\d{1,}@gmail.com$/
+        if(!part1.test(eeid))
+        {
+            alert("invalid email id");
+         
+            return;  
+        }
+        
+        var o1=document.f1.occ.value;
+        
+        // var part2=/^(Backend|Webprogramming)$/
+        // if(!part2.test(o1))
+        // {
+        //     alert("plezz select one occup.");
+        //     return;  
+        // }
+        if(o1=="")
+        {
+            alert("plezz select one occup.");
+            return;  
+        }
+
+        var r1=document.f1.junk.value;
+        var part2=/^(Absolutely|No way,man)$/
+         if(!part2.test(r1))
+         {
+             alert("plezz select one radio button.");
+             return;  
+         }
+       
+        
+      document.f1.submit();
+    }
+</script>
+</head>
+<body>
+    <form name="f1">
+    <table border="1">
+    <tr>
+        <td  colspan="2">visitor information</td>
+    </tr>
+
+    <tr>
+        <td><label for="email">Email Address</label></td> 
+        <td><input type="text" name="eid" id="email-id" /></td> 
+
+    </tr><br/>
+
+   <tr>
+    <td><label for="pwd">Do you use web for</label></td> 
+     <td><input type="checkbox" name="pwd" />Research
+     <input type="checkbox"name="pwd" />Purchase</td> 
+   </tr><br/>
+
+   <tr>
+    <td><label for="user">Occupation:</label></td> 
+    <td>(select one)
+    <select name="occ" size="0">
+        <option></option>
+        <option name="occu" value="Backend">Backend</option>
+        <option name="occu" value="Webprogramming"> webprogramming</option>
+    </select></td> 
+   </tr><br/>
+
+   <tr>
+   <td><label for="junk">Want us to send you junk email?</label></td>
+   <td><input type="radio" name="junk" value="Absolutely" />Absolutely
+   <input type="radio" name="junk" value="No way,man"/>No way,man</td>
+   </tr><br/>
+
+   <tr>
+   <td align="right"><input type="button" value="submit" onclick="validate()"/></td>
+   <td> <input type="reset" value="reset"/></td>
+   </tr>
+   <tr>
+   
+   </tr>
+</table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+   <script>
+    var h=0;
+    var m=0;
+    var s=0;
+    var ms=0;
+    function start()
+    {
+       ++ms;
+       if(ms==100)
+        {
+           s++;
+           ms=0;       
+        }
+        if(s==60)
+        {
+           s=0;
+           m++;
+           ms=0;
+                  
+        }
+        if(m==60)
+        {  
+           m=0;
+           h++;
+           ms=0;
+           s=0;         
+        } 
+        
+        ss=s;
+        mm=m;
+        hh=h;
+        mss=ms;
+        if(ms<10)
+        { 
+            mss="0"+ms;        
+        } 
+        if(s<10)
+        { 
+            ss="0"+s;    
+        } 
+        if(m<10)
+        { 
+            mm="0"+m;     
+        } 
+        if(h<10)
+        { 
+            hh="0"+h;      
+        }     
+          
+        
+
+        time=hh+":"+mm+":"+ss+":"+mss;
+        document.getElementById("Stopw").innerHTML="<h1>"+time+"<h1/>";
+        flag=setTimeout(start,10);
+      
+       
+
+    }
+    function Pause()
+    { 
+        clearTimeout(flag);        
+    } 
+    function Reset1()
+    { 
+        Pause();
+    //     hh=00;
+    //    mm=00;
+    //    ss=00;
+    //    ms=00;
+       document.getElementById("Stopw").innerHTML="<h1>"+hh+":"+mm+":"+ss+":"+ms+"</h1>";  
+    } 
+
+    
+
+   </script>
+
+</head>
+<body>
+    
+    <form>
+        <div id="Stopw"><h1>00:00:00:00</h1></div>
+        <input type="button" value="Start" onclick="start()" />
+        <input type="button" value="Pause" onclick="Pause()"/>
+        <input type="button" value="Reset" onclick="Reset1()" />
+    </form>
+</body>
+</html>

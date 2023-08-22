@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+        function changecol()
+        {
+             var pp=document.getElementsByTagName("p");
+             for(i=0;pp.length;i++)
+             {
+                  pp[i].style.color="red";
+                  pp[i].style.backgroundColor="yellow";
+                  pp[i].style.padding="30px";
+                  pp[i].firstChild.nodeValue = "This is paragraph no : "+(i+1);                  
+             }            
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <p>this is sachin </p>
+        <p>this is sachin </p>
+        <p>this is sachin </p>
+        <p>this is sachin </p>
+        <button onclick="changecol()">changePara</button>
+    </div>
+</body>
+</html>
