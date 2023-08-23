@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        //left    
+          $("#left").click(function(){      
+            myanimation();
+           })
+
+           function myanimation()
+           {
+              $("img").animate({left:'+=100px'},"fast","linear");//,function(){myanimation()}
+           }
+          
+          //top 
+           $("#top").click(function(){      
+            myanimation1();
+           })
+
+           function myanimation1()
+           {
+              $("img").animate({top:'+=200px'},"fast","linear")//,function(){myanimation1();});
+           }
+
+           //diagonal
+           $("#diagonal").click(function(){      
+            myanimation1();
+           })
+
+           function myanimation1()
+           {
+              $("img").animate({left:'+=200px',top:'+=200px'},"fast","linear")//,function(){myanimation1();});
+           }
+        })
+    </script>
+        
+</head>
+<body>
+    <button id="left">left</button>
+    <button id="top">top</button>
+    <button id="diagonal">diagonal</button>
+    
+    
+    
+    <div>
+        <img src="Cricket.jpg" width="200" height="200" style="left: 4px;position: absolute;"/>
+    </div>
+    
+</body>
+</html>

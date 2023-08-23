@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script src="jquery-3.6.4.min.js"></script>
+   <script>
+          $(document).ready(function(){
+            $("img").mouseover(function(){
+            $(this).fadeOut("slow");   
+        })   
+        })
+
+        $(document).ready(function(){
+            $("img").mouseout(function(){
+            $(this).fadeIn("slow");   
+        })  
+        })
+   </script>
+</head>
+<body>
+    <div>
+        <tr>
+            <img src="browser.jpg" width="200" height="200"/>
+            <img src="Cricket.jpg" width="200" height="200"/>
+            <img src="desktop.jpg" width="200" height="200"/>
+        </tr>
+        <br/>
+
+        <tr>
+            <img src="folder.jpg" width="200" height="200"/>
+            <img src="Football.jpg" width="200" height="200"/>
+            <img src="img1.jpg" width="200" height="200">
+        </tr>
+        <br/>
+        <tr>
+            <img src="mycomputer.jpg" width="200" height="200"/>
+            <img src="pic1.jpg" width="200" height="200"/>
+            <img src="Volleyball.jpg" width="200" height="200"/>
+
+        </tr>
+    </div>
+</body>
+</html>

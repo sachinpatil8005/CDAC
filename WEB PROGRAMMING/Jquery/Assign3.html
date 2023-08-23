@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("a.show").click(function(){  
+            $("div.details").slideToggle(3000);  
+        })  
+        $("a.hide").click(function(){
+            $("div.details").slideUp(3000);  
+        })  
+
+        $("a.shows").click(function(){
+            //$("div.info").slideDown(3000);  
+            $("div.info").slideToggle(3000);  
+        })  
+        $("a.hides").click(function(){
+            $("div.info").slideUp(3000);  
+        }) 
+        })
+        
+    </script>
+        <style>
+        div{
+
+           float: left;     
+           }
+        </style>
+
+    
+</head>
+<body>
+    <div>
+        <div>    
+         <img src="pic1.jpg" width="300" height="300"/>   
+         <h3>oneplus</h3>
+          <a href="#o" class="show" >view specification</a><br/>
+          <a href="#o" class="hide">hide</a>
+        </div>
+        <div class="details" style="display: none;">
+            <p>RAM: 7GB</p>
+            <p>camera:48 Mgp</p>
+            <p>color:black</p>
+        </div>
+        <div>
+            <img src="img1.jpg" width="300" height="300"/>
+            <h3>Iphone</h3>
+            <a href="#i" class="shows">view specification</a><br/>
+            <a href="#i" class="hides">hide</a>
+        </div>
+        <div class="info" style="display: none;">
+            <p>RAM: 9GB</p>
+            <p>camera:48 Mgp</p>
+            <p>color:black</p>
+        </div>
+      
+    </div>
+</body>
+</html>
