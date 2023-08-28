@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>know-it</title>
+    <style>
+        p{
+            margin-left: 50px;
+            background-color: white;
+            color: rgb(167, 58, 58);
+            font-style: italic;
+            font-size: 12px;
+        }
+        a{
+            background-color: burlywood;
+            color:aquamarine;
+        }
+         ul{
+            list-style-type: none;
+            padding: 15px;
+        }
+        li:hover{
+            background-color: rgb(53, 88, 18);
+         }
+         li{
+            display: inline;
+            padding: 15px;
+         }
+        a.hover
+        {
+            background-color: blue;
+        }
+       
+  </style>
+   <script>
+    imgarr=["index.jpg","index (1).jpg","index (2).jpg","index (3).jpg","index (4).jpg","index (5).jpg"];
+    index = 0;
+    function imagenext()
+    {
+        index++;
+        if(index == imgarr.length)
+            index = 0;
+        document.getElementById("img1").src=imgarr[index];
+        setTimeout(imagenext,3000) ;
+    }
+    
+    // function nextImg(){
+    //     index++;
+    //     if(index == imgarr.length)
+    //         index = 0;
+    //     document.getElementById("img1").src=imgarr[index];
+    // }
+
+    // function previousImg(){
+    //     index--;
+    //     if(index == -1)
+    //         index = imgarr.length-1;
+    //     document.getElementById("img1").src=imgarr[index];
+    // }
+    </script>
+</head>
+<body style="margin: 0px" onload="imagenext()">
+    <div style="background-color: azure;height: 60px;width: 100%;">
+      
+    <img src="cdac-logo.png" alt="logo" style="float: left;margin-left: 20px;margin-top: 20px; height: 40px; width: 300px;"/>
+    <input type="text" name="search" placeholder="Search" style="background-color: rgb(41, 70, 77);color: aqua; margin-left: 700px;height: 20px;width: 200px;">
+    <!-- <img src="download (2).jpg" alt="logo" style="float: right;margin-right: 10px;height: 70px; width: 220px;"/> -->
+    </div>
+    <div style="background-color: azure;height: 10px;width: 100%;"></div>
+    <nav style="background-color: aqua;height: 40px;width: 100%;">
+        <div style="height: 60px;width: 100%;">
+        <ul>
+            <li>COURSES</li>
+            <li>LOGIN</li>
+            <li>ABOUT US</li>
+            <li>PLACEMENT</li>
+            <li>TRAINING CENTRE</li>
+            <li>CONTACT</li>
+        </ul>
+        
+        </div>
+
+    </nav>
+    <div style="background-color: azure;height: 10px;width: 100%;"></div>
+    <img src="index.jpg" height="300px" width="100%" id="img1">
+    <br/>
+    
+    <!-- <button onclick="previousImg()" style="float: left;background-color: aquamarine;">Previos</button>
+    <button onclick="nextImg()" style="float:right;background-color: aquamarine;">Next</button>
+     -->
+
+
+    
+</body>
+</html>
